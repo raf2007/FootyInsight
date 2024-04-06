@@ -1,9 +1,12 @@
 package com.example.footyinsight;
 
-import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,26 +15,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button settingsButton = findViewById(R.id.button);
-        Button homeButton = findViewById(R.id.button2);
+        Button easyButton = findViewById(R.id.easyButton);
+        Button normalButton = findViewById(R.id.normalButton);
+        Button hardButton = findViewById(R.id.hardButton);
 
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        easyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new SettingsFragment())
-                        .commit();
+                Intent intent = new Intent(MainActivity.this, EasyActivity.class);
+                startActivity(intent);
             }
         });
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        normalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new HomeFragment())
-                        .commit();
+                Intent intent = new Intent(MainActivity.this, NormalActivity.class);
+                startActivity(intent);
             }
         });
 
+        hardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HardActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
