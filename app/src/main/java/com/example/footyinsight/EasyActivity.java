@@ -91,6 +91,10 @@ public class EasyActivity extends AppCompatActivity {
         buttonColors[1] = Color.WHITE;
         buttonColors[2] = Color.WHITE;
         buttonColors[3] = Color.WHITE;
+        option1Button.setBackgroundColor(Color.WHITE);
+        option2Button.setBackgroundColor(Color.WHITE);
+        option3Button.setBackgroundColor(Color.WHITE);
+        option4Button.setBackgroundColor(Color.WHITE);
     }
 
     private void loadQuestion() {
@@ -141,10 +145,18 @@ public class EasyActivity extends AppCompatActivity {
 
     private void disableSubmitButton() {
         submitButton.setEnabled(false);
+        option1Button.setEnabled(false);
+        option2Button.setEnabled(false);
+        option3Button.setEnabled(false);
+        option4Button.setEnabled(false);
     }
 
     private void enableSubmitButton() {
         submitButton.setEnabled(true);
+        option1Button.setEnabled(true);
+        option2Button.setEnabled(true);
+        option3Button.setEnabled(true);
+        option4Button.setEnabled(true);
     }
 
     private void disableNextButton() {

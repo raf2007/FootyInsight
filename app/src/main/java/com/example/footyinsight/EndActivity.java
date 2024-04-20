@@ -22,13 +22,13 @@ public class EndActivity extends AppCompatActivity {
 
         pointsTextView.setText("Total Points: " + points);
 
-        findViewById(R.id.restartButton).setOnClickListener(new View.OnClickListener() {
+ /*       findViewById(R.id.restartButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 restartQuiz();
             }
         });
-
+*/
         findViewById(R.id.homeButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,13 +36,13 @@ public class EndActivity extends AppCompatActivity {
             }
         });
     }
-
+    /*
     private void restartQuiz() {
         Intent intent = new Intent(EndActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
-
+*/
     private void goToMainActivity() {
         Intent intent = new Intent(EndActivity.this, MainActivity.class);
         startActivity(intent);
