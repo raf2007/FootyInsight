@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "546852188904",
+    "project_id": "footyinsight",
+    "storage_bucket": "footyinsight.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546852188904:android:a1ee69dca663010dd80f5d",
+        "android_client_info": {
+          "package_name": "com.example.footyinsight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHMD5vs8Jtnyto1xpNMlKmeBiV4F9TJp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
