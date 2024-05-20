@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/back"
+    android:background="@drawable/background"
     tools:context=".SignIn">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -24,54 +24,87 @@
             android:padding="24dp"
             android:background="@drawable/custom_edittext">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign In"
-                android:textSize="36dp"
-                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_gravity="center"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"/>
+                android:textColor="#000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Please sign in to your account"
+                android:layout_marginTop="5dp"/>
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:id="@+id/signin_email"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/round_back"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textSize="16sp"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="Email"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/lavender"/>
-            <EditText
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/signin_password"
-                android:background="@drawable/custom_edittext"
-                android:layout_marginTop="15dp"
-                android:padding="8dp"
-                android:hint="Password"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/lavender"/>
-            <Button
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_back">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/signin_password"
+                    android:inputType="textPassword"
+                    android:background="@drawable/round_back"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:maxLines="1"
+                    android:hint="Password"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/lavender"/>
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signInBtn"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:text="Sign In"
-                android:id="@+id/signin_button"
-                android:textSize="18dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/lavender"
-                app:cornerRadius = "20dp"/>
-            <TextView
+                android:textAllCaps="false"
+                android:layout_marginTop="40dp"
+                android:textSize="25dp"
+                android:background="@drawable/round_back_blue"
+                android:textColor="#FFFFFF"
+                />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/dont_have_account"
-                android:text="Don't have an account? Sign Up"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/lavender"
-                android:textSize="18dp"/>
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"/>
+                <TextView
+                    android:id="@+id/signUpBtn"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
