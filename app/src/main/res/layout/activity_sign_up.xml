@@ -86,16 +86,6 @@
                     android:drawableLeft="@drawable/baseline_lock_24"
                     android:drawablePadding="8dp"
                     android:textColor="@color/lavender"/>
-                <ImageView
-                    android:id="@+id/passwordIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:src="@drawable/eye"
-                    android:adjustViewBounds="true"
-                    android:layout_marginEnd="10dp"/>
 
             </RelativeLayout>
             <RelativeLayout
@@ -117,16 +107,6 @@
                     android:drawableLeft="@drawable/baseline_lock_24"
                     android:drawablePadding="8dp"
                     android:textColor="@color/lavender"/>
-                <ImageView
-                    android:id="@+id/confirmPasswordIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:src="@drawable/eye"
-                    android:adjustViewBounds="true"
-                    android:layout_marginEnd="10dp"/>
 
             </RelativeLayout>
 

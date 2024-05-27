@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/manrope_extrabold"
-            android:text="Finish!!!"
+            android:text="Finish"
             android:textSize="48sp">
 
         </TextView>
