@@ -75,13 +75,22 @@
                     android:textColor="@color/lavender"/>
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/forgotPasswordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Forgot Password?"
+                android:textColor="@color/primary"
+                android:layout_marginTop="10dp"/>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/signInBtn"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:text="Sign In"
                 android:textAllCaps="false"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:textSize="25dp"
                 android:background="@drawable/round_back_blue"
                 android:textColor="#FFFFFF"/>
@@ -101,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp">
+                android:layout_marginTop="20dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

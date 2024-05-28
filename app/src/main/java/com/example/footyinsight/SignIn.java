@@ -22,7 +22,7 @@ public class SignIn extends AppCompatActivity {
     private FirebaseAuth auth;
     private EditText signin_email, signin_password;
     private Button signin_button;
-    private TextView signUpBtn, guestModeBtn;
+    private TextView signUpBtn, guestModeBtn, forgotPasswordBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class SignIn extends AppCompatActivity {
         signin_button = findViewById(R.id.signInBtn);
         signUpBtn = findViewById(R.id.signUpBtn);
         guestModeBtn = findViewById(R.id.guestModeBtn);
+        forgotPasswordBtn = findViewById(R.id.forgotPasswordBtn);
 
         signin_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +82,30 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(SignIn.this, MainActivity.class));
                 finish();
+            }
+        });
+
+        forgotPasswordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = signin_email.getText().toString();
+
+                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    auth.sendPasswordResetEmail(email)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(SignIn.this, "Reset Link Sent to Your Email", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(SignIn.this, "Unable to Send Reset Mail", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                } else {
+                    signin_email.setError("Please enter valid email");
+                }
             }
         });
     }
